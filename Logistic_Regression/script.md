@@ -8,5 +8,11 @@ This is where logistic regression comes in. The thing we are trying to predict i
 
 Unlike the linear regression video, we will skip the case with 1 predictor and go straight into the general case where we use matrices. Before we do that though, we will need to figure out how to make sure all of our probabilities are between 0 and 1. We will do this using the sigmoid function. This video assumes that you already watched the linear regression video so things that are covered in more detail in the linear regression video like categorical variables will only be discussed briefly here. However, gradient descent will be covered in much more detail here than the linear regression video as there is no closed form solution to logistic regression.
 
-
 The math prerequisites for this video are the exact same as the linear regression video and are shown on the screen. Again, I've put timestamps in this video so use those if you need to. Now, let's begin.
+
+## Sigmoid Function
+
+Regression is used when you want to predict a continous value or something close enough to continous. Height is something continuous and you would use regression to predict it while price is not because you can't have a price like 49.5392 dollars but we still treat it as continuous for regression. The example above is not predicting something that resembles a continous value though. It is predicting an outcome. When we are predicting outcomes or classes, we are doing a classification task.
+
+Despite the name, logistic regression is used for binary classification meaning there are only two outcomes or classes and is not used for regression. For regression, you would use something like linear regression. For a binary variable, we only need to use one variable for the two outcomes. The variable will equal one for one outcome and equal zero for the other. For the example above, let's say that the target is a one when a student passes and a 0  
+when the student fails.
