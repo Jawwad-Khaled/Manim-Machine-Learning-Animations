@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Gradient_Descent/819936691_3400201446_2358810818.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Gradient_Descent/2213807979_4046863825_545123678.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Gradient_Descent/2213807979_988758550_2748519498.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Gradient_Descent/2213807979_4046863825_3492075052.mp4'

@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Nonlinearity/819936691_675029630_755466902.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Nonlinearity/2213807979_4046863825_719859713.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Nonlinearity/2213807979_2167235750_3462328174.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Nonlinearity/2213807979_4067546576_3406110856.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Nonlinearity/2213807979_4046863825_2546315949.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Nonlinearity/2213807979_1619390228_315266196.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Nonlinearity/2213807979_1093558214_1015856069.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Nonlinearity/2213807979_4046863825_493346165.mp4'

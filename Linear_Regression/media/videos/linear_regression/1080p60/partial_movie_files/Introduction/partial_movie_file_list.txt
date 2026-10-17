@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/819936691_2123129454_2358810818.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_1910898909_1528854307.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_357892356_1546840617.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_3441346451_874075079.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_1990040266_750270490.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_853191288_922428335.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_4003430800_922428335.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_3305307469_373052763.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_1301540670_3367080438.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_1748588953_3367080438.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_1990040266_2574770205.mp4'
+file 'file:C:/Users/mechz/manimations/Linear_Regression/media/videos/linear_regression/1080p60/partial_movie_files/Introduction/2213807979_832907833_4005621085.mp4'
