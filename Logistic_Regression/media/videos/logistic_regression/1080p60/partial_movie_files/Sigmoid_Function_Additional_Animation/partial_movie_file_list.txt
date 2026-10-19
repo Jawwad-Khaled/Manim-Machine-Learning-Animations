@@ -1,0 +1,3 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sigmoid_Function_Additional_Animation/819936691_1466147539_223132457.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sigmoid_Function_Additional_Animation/2213807979_4046863825_2345502669.mp4'

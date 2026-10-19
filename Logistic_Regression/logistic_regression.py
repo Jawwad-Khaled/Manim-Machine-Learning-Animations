@@ -142,3 +142,10 @@ class Sigmoid_Function(Scene):
         self.wait()
         self.play(Write(text23))
         self.wait()
+
+class Sigmoid_Function_Additional_Animation(Scene):
+    def construct(self):
+        text1 = MathTex(r'\hat{y}=p=\frac{1}{1+e^{-(\beta_0+\beta_1x_1+\cdots+\beta_px_p)}}', height=1.8)
+
+        self.play(Write(text1))
+        self.wait()
