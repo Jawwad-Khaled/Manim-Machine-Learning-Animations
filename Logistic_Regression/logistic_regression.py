@@ -340,7 +340,7 @@ class Gradient_Descent_2D(Scene):
         self.wait()
         self.play(opacity_tracker.animate.set_value(0))
         self.play(alpha.animate.set_value(0), run_time=1)
-        self.remove(tangent_arrow_left)
+        self.remove(tangent_arrow_left) 
         self.wait()
 
 class Gradient_Descent_3D(ThreeDScene):
@@ -411,3 +411,11 @@ class Gradient_Descent_Contour_Plot_Extreme(Scene):
             self.play(point.animate.move_to(coordinates))
             self.wait()
         self.wait()
+
+class Gradient_Descent_Formula_Correction(Scene):
+    def construct(self):
+        text1 = MathTex(r'\beta=\beta-\alpha\nabla{L}(\beta)').shift(UP*1)
+        text2 = MathTex(r'\beta=\beta+\frac{\alpha}{n}X^T(y-\sigma(X\beta))').shift(DOWN*1)
+        self.play(Write(text1), Write(text2))
+        self.wait()
+        self.play(Unwrite(text1), Unwrite(text2))
