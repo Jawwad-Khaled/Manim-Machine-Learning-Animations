@@ -1,12 +1,13 @@
 from manim import *
 import numpy as np
+from scipy.stats import skewnorm
 
 class Introduction(Scene):
     def construct(self):
         axes = Axes(x_range=[0, 10, 2], y_range=[0, 1.2, 0.2], x_length=9, y_length=6).shift(LEFT*1).add_coordinates()
         axis_labels = axes.get_axis_labels(x_label='\\text{Hours Studied}', y_label='\\text{Probability Of Passing}')
         linear_graph = axes.plot(lambda x: 0.12946611 * x, x_range=[0, 10], color=BLUE)
-        logistic_graph = axes.plot(lambda x: 1 / (1 + np.exp(-(-2.03882363 + 0.81116393 * x))), x_range=[0, 10], color=BLUE)
+        logistic_graph = axes.plot(lambda x: 1 / (1 + np.exp(-(-4.0776622 + 0.81116393 * x))), x_range=[0, 10], color=BLUE)
         text1 = MathTex(r'y\in\{0, 1\}')
         text2 = Tex(r'Sigmoid function').shift(UP*2.5)
         text3 = Tex(r'General solution with gradient descent').shift(UP*1.25)
@@ -416,6 +417,183 @@ class Gradient_Descent_Formula_Correction(Scene):
     def construct(self):
         text1 = MathTex(r'\beta=\beta-\alpha\nabla{L}(\beta)').shift(UP*1)
         text2 = MathTex(r'\beta=\beta+\frac{\alpha}{n}X^T(y-\sigma(X\beta))').shift(DOWN*1)
+        self.play(Write(text1), Write(text2))
+        self.wait()
+        self.play(Unwrite(text1), Unwrite(text2))
+
+class Sum_Of_Squared_Errors_Derivation(Scene):
+    def construct(self):
+        text1 = MathTex(r'\text{The variance }\sigma^2\text{ is a constant!}').shift(UP*2)
+        text2 = MathTex(r'f(\hat{y})=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(y-\hat{y})^2}{2\sigma^2}}')
+        text3 = MathTex(r'\mathcal{L}=\prod^n_{i=1}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(y-\hat{y})^2}{2\sigma^2}}').shift(DOWN*2)
+        text4 = MathTex(r'\log(\mathcal{L})=\sum^n_{i=1}\log(\frac{1}{\sqrt{2\pi}\sigma})-\frac{(y-\hat{y})^2}{2\sigma^2}').shift(UP*2)
+        text5 = Tex(r'After removing constants')
+        text6 = MathTex(r'\log(\mathcal{L})=-\sum^n_{i=1}(y-\hat{y})^2').shift(DOWN*2)
+        text7 = MathTex(r'L=\sum^n_{i=1}(y-\hat{y})^2')
+
+        self.play(LaggedStart(Write(text1), Write(text2), Write(text3), lag_ratio=0.5, run_time=5))
+        self.wait()
+        self.play(Unwrite(text1), Unwrite(text2), Unwrite(text3))
+        self.play(LaggedStart(Write(text4), Write(text5), Write(text6), lag_ratio=0.5, run_time=5))
+        self.wait()
+        self.play(Unwrite(text4), Unwrite(text5), Unwrite(text6))
+        self.play(Write(text7))
+        self.wait()
+        self.play(Unwrite(text7))
+
+class Loss_Example(Scene):
+    def construct(self):
+        text1 = MathTex(r'-\log(0.01)=4.6052').shift(UP*1)
+        text2 = MathTex(r'-\log(0.99)=0.0101').shift(DOWN*1)
+        text3 = MathTex(r'(1-0.01)^2=0.9801').shift(UP*1)
+        text4 = MathTex(r'(1-0.99)^2=0.0001').shift(DOWN*1)
+
+        self.play(Write(text1), Write(text2))
+        self.wait()
+        self.play(Unwrite(text1), Unwrite(text2))
+        self.play(Write(text3), Write(text4))
+        self.wait()
+        self.play(Unwrite(text3), Unwrite(text4))
+
+class Review_Of_Previous_Topics(Scene):
+    def construct(self):
+        axes = Axes(x_range=[0, 10, 2], y_range=[0, 1.2, 0.2], x_length=9, y_length=6).shift(LEFT*1).add_coordinates()
+        axis_labels = axes.get_axis_labels(x_label='\\text{Hours Studied}', y_label='\\text{Probability Of Passing}')
+        logistic_graph = axes.plot(lambda x: 1 / (1 + np.exp(-(-1.09797958 -1.36146853e+00 * x -1.56620345e+00 * x**2 -9.36383462e-01 * x**3 +1.08879915e+00 * x**4 -2.85521901e-01 * x**5 +2.97514878e-02 * x**6 -1.10192912e-03 * x**7))), x_range=[0, 10], use_smoothing=False, color=BLUE)
+        np.random.seed(75)
+        x = 9 * np.random.rand(30)
+        y = 6 * x + 40 + 10 * np.random.randn(30)
+        y = [1 if item > 70 else 0 for item in y]
+        dots = [Dot((axes.c2p(i, j)), color=YELLOW) for i, j in zip(x, y)] 
+        text1 = Tex(r'Whether the student at breakfast or not').shift(UP*2)
+        text2 = MathTex(r'1\text{ if yes}')
+        text3 = MathTex(r'0\text{ if no}').shift(DOWN*2)
+        text4 = Tex(r'Type of caffeinated beverage consumed before exam').shift(UP*3)
+        text5 = Tex(r'Order is coffee, tea, energy drink, or none').shift(UP*1.5)
+        text6 = MathTex(r'\text{Drank coffee }\begin{bmatrix}1&0&0&0\end{bmatrix}')
+        text7 = MathTex(r'\text{Drank none }\begin{bmatrix}0&0&0&1\end{bmatrix}').shift(DOWN*1.5)
+        text8 = MathTex(r'\text{Why? }\begin{bmatrix}1&1&1&0\end{bmatrix}').shift(DOWN*3)
+        text9 = Tex(r'Primary type of study method').shift(UP*3)
+        text10 = Tex(r'Order is notes, videos, flashcards, practice problems or other').shift(UP*1.5)
+        text11 = MathTex(r'\text{Primarily used videos }\begin{bmatrix}0&1&0&0\end{bmatrix}')
+        text12 = MathTex(r'\text{Primarily used other }\begin{bmatrix}0&0&0&0\end{bmatrix}').shift(DOWN*1.5)
+        text13 = Tex(r'The column for other has been removed').shift(DOWN*3)
+
+        self.play(Write(text1), Write(text2), Write(text3))
+        self.wait()
+        self.play(Unwrite(text1), Unwrite(text2), Unwrite(text3))
+        self.play(Write(text4), Write(text5), Write(text6), Write(text7), Write(text8))
+        self.wait()
+        self.play(Unwrite(text4), Unwrite(text5), Unwrite(text6), Unwrite(text7), Unwrite(text8))
+        self.play(Write(text9), Write(text10), Write(text11), Write(text12), Write(text13))
+        self.wait()
+        self.play(Unwrite(text9), Unwrite(text10), Unwrite(text11), Unwrite(text12), Unwrite(text13))
+        self.play(Create(axes), Create(axis_labels))
+        self.play(LaggedStart(*[Write(dot) for dot in dots], lag_ratio=0.25, run_time=3))
+        self.play(Create(logistic_graph), run_time=3)
+        self.wait()
+
+class Numerical_Stability_3D(ThreeDScene):
+    def construct(self):
+        axes = ThreeDAxes(x_range=[-2, 2, 1], y_range=[-2, 2, 1], z_range=[-1, 5, 1], x_length=6, y_length=6, z_length=6)
+        graph = Surface(lambda u, v: axes.c2p(u, v, (u+v-1)**2 + 0.05*(v-1)**2), u_range=[-2, 2], v_range=[-2, 2])
+        graph_stuff = VGroup(axes, graph)
+        graph_stuff.shift(ORIGIN - axes.c2p(0, 0, 1.5))
+
+        self.set_camera_orientation(phi=75*DEGREES)
+        self.add(graph_stuff)
+        self.begin_ambient_camera_rotation(rate=PI/10, about='theta')
+        self.wait(20)
+        self.stop_ambient_camera_rotation()
+
+class Ill_Conditioning(Scene):
+    def construct(self):
+        axes = Axes(x_range=[0, 3.5, 1], y_range=[0, 800, 200], x_length=9, y_length=6).shift(LEFT*1).add_coordinates()
+        axis_labels = axes.get_axis_labels(x_label='x', y_label='y')
+        graph_real = axes.plot(lambda x: x**6, x_range=[0, 3], color=YELLOW)
+        approximation1 = axes.plot(lambda x: 30 * x**2, x_range=[0, 3], color=BLUE)
+        approximation2 = axes.plot(lambda x: 15 * x**3, x_range=[0, 3], color=BLUE)
+        approximation3 = axes.plot(lambda x: 8 * x**4, x_range=[0, 3], color=BLUE)
+        approximation4 = axes.plot(lambda x: 2.8 * x**5, x_range=[0, 3], color=BLUE)
+        approximation5 = axes.plot(lambda x: 9.0*x**5 - 30.67*x**4 + 49.02*x**3 - 36.67*x**2 + 10.94*x, x_range=[0, 3], color=BLUE)
+        value = ValueTracker(0)
+        text1 = MathTex(r'\begin{bmatrix}({x_j}^{(1)})^6\\({x_j}^{(2)})^6\\\vdots\\({x_j}^{(n-1)})^6\\({x_j}^{(n)})^6\end{bmatrix}\approx c_1\begin{bmatrix}{x_j}^{(1)}\\{x_j}^{(2)}\\\vdots\\{x_j}^{(n-1)}\\{x_j}^{(n)}\end{bmatrix}+\cdots+c_5\begin{bmatrix}({x_j}^{(1)})^5\\({x_j}^{(2)})^5\\\vdots\\({x_j}^{(n-1)})^5\\({x_j}^{(n)})^5\end{bmatrix}')
+        text2 = MathTex(r'\text{Small change in }y').shift(UP*0.5)
+        text3 = MathTex(r'\text{Large change in }\beta').shift(DOWN*0.5)
+        text4 = MathTex(r'\beta+\beta^2=5').shift(UP*1)
+        text5 = always_redraw(lambda: MathTex(f'\\beta={value.get_value():.1f}'))
+        text6 = always_redraw(lambda: MathTex(f'\\beta^2={5-value.get_value():.1f}').shift(DOWN*1))
+        text7 = Tex('Center the predictor before creating its powers').shift(UP*1)
+        text8 = Tex('Use regularization')
+        text9 = Tex('Use a model better suited for nonlinearity').shift(DOWN*1)
+
+        self.play(Create(axes), Create(axis_labels), Create(graph_real))
+        self.wait()
+        self.play(Create(approximation1))
+        self.wait() 
+        self.play(ReplacementTransform(approximation1, approximation2))
+        self.wait()
+        self.play(ReplacementTransform(approximation2, approximation3))
+        self.wait()
+        self.play(ReplacementTransform(approximation3, approximation4))
+        self.wait()
+        self.play(ReplacementTransform(approximation4, approximation5))
+        self.wait()
+        self.play(Uncreate(axes), Uncreate(axis_labels), Uncreate(graph_real), Uncreate(approximation5))
+        self.play(Write(text1), run_time=3)
+        self.wait()
+        self.play(Unwrite(text1))
+        self.play(LaggedStart(Write(text2), Write(text3), run_time=3, lag_ratio=0.75))
+        self.wait()
+        self.play(Unwrite(text2), Unwrite(text3))
+        self.play(LaggedStart(Write(text4), Write(text5), Write(text6), run_time=3, lag_ratio=0.75))
+        self.wait()
+        self.play(value.animate.set_value(-50), run_time=20)
+        self.wait()
+        self.play(Unwrite(text4), Unwrite(text5), Unwrite(text6))
+        self.wait()
+        self.play(LaggedStart(Write(text7), Write(text8), Write(text9), run_time=3, lag_ratio=0.75))
+        self.wait()
+        self.play(Unwrite(text7), Unwrite(text8), Unwrite(text9))
+
+class Centering_The_Predictor(Scene):
+    def construct(self):
+        mean_symmetric = ValueTracker(2)
+        location_skewed = ValueTracker(1.7114)
+        axes = Axes(x_range=[-4, 4, 1], y_range=[0, 0.799, 0.2], x_length=10, y_length=6).add_coordinates()
+        axis_labels = axes.get_axis_labels(x_label='x', y_label='y')
+        graph_symmetric = always_redraw(lambda: axes.plot(lambda x: (1/(0.55*np.sqrt(2*PI))) * np.exp(-((x-mean_symmetric.get_value())**2)/(2*0.55**2)), x_range=[-4, 4], color=YELLOW))
+        graph_skewed = always_redraw(lambda: axes.plot(lambda x: 2*np.exp(-(2*(x-location_skewed.get_value()))-np.exp(-2*(x-location_skewed.get_value()))), x_range=[-4, 4], color=BLUE))
+        self.play(Create(axes), Create(axis_labels))
+        self.play(Create(graph_symmetric), run_time=5)
+        self.wait()
+        self.play(mean_symmetric.animate.set_value(0), run_time=10)
+        self.wait()
+        self.play(Uncreate(graph_symmetric), run_time=3)
+        self.play(Create(graph_skewed), run_time=5)
+        self.wait()
+        self.play(location_skewed.animate.set_value(-0.2886), run_time=10)
+        self.wait()
+        self.play(Uncreate(graph_skewed), run_time=3)
+        self.play(Uncreate(axes, axis_labels))
+
+class Positive_Parameter(Scene):
+    def construct(self):
+        value = ValueTracker(-55)
+        text1 = MathTex(r'\beta+\beta^2=5').shift(UP*1)
+        text2 = always_redraw(lambda: MathTex(f'\\beta={value.get_value():.1f}'))
+        text3 = always_redraw(lambda: MathTex(f'\\beta^2={5-value.get_value():.1f}').shift(DOWN*1))
+
+        self.add(text1, text2, text3)
+        self.play(value.animate.set_value(50), run_time=3)
+        self.wait()
+        self.play(Unwrite(text1), Unwrite(text2), Unwrite(text3))
+
+class Gradient_Descent_Update_Correction(Scene):
+    def construct(self):
+        text1 = MathTex(r'\beta\leftarrow\beta-\alpha\nabla{L}(\beta)').shift(UP*1)
+        text2 = MathTex(r'\beta\leftarrow\beta+\frac{\alpha}{n}X^T(y-\sigma(X\beta))').shift(DOWN*1)
+        
         self.play(Write(text1), Write(text2))
         self.wait()
         self.play(Unwrite(text1), Unwrite(text2))

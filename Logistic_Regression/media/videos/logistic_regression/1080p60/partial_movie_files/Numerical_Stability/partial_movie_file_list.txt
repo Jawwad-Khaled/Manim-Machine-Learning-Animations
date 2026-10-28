@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Numerical_Stability/819936691_2090591771_223132457.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Numerical_Stability/2213807979_3959105493_3660931990.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Numerical_Stability/2213807979_2627324305_1229939739.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Numerical_Stability/2213807979_4046863825_1898404407.mp4'

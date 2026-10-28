@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Gradient_Descent_Update_Correction/819936691_1622259177_223132457.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Gradient_Descent_Update_Correction/2213807979_4046863825_1778878317.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Gradient_Descent_Update_Correction/2213807979_390833577_1970889858.mp4'

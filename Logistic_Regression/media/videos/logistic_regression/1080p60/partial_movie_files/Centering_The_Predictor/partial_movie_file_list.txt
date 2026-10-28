@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/819936691_3359506995_223132457.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_323742548_1191948721.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_4046863825_390841572.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_3992378573_3192670067.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_4046863825_1099908983.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_3906641008_1431687817.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_368957529_894527073.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_4046863825_3049888363.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_2685157082_405740561.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_4046863825_4216675481.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_2185565776_1441482685.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Centering_The_Predictor/2213807979_1366694305_1037965756.mp4'

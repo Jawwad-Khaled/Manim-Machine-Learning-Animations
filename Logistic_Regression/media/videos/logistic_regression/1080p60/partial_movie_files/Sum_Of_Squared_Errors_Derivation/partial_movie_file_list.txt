@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sum_Of_Squared_Errors_Derivation/819936691_1654535913_2358810818.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sum_Of_Squared_Errors_Derivation/2213807979_4046863825_3324524725.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sum_Of_Squared_Errors_Derivation/2213807979_1631803520_1815374339.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sum_Of_Squared_Errors_Derivation/2213807979_3966802552_1797518373.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sum_Of_Squared_Errors_Derivation/2213807979_4046863825_165359985.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sum_Of_Squared_Errors_Derivation/2213807979_2612731187_3256094792.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sum_Of_Squared_Errors_Derivation/2213807979_392452846_3753778678.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sum_Of_Squared_Errors_Derivation/2213807979_4046863825_3809425429.mp4'
+file 'file:C:/Users/mechz/manimations/Logistic_Regression/media/videos/logistic_regression/1080p60/partial_movie_files/Sum_Of_Squared_Errors_Derivation/2213807979_708386660_521361683.mp4'
