@@ -22,6 +22,7 @@ class Introduction(Scene):
         y = 6 * x + 40 + 10 * np.random.randn(30)
         y = [1 if item > 70 else 0 for item in y]
         dots = [Dot((axes.c2p(i, j)), color=YELLOW) for i, j in zip(x, y)]
+        
         self.play(LaggedStart(Create(axes), Create(axis_labels)), run_time=5)   
         self.play(LaggedStart(*[Write(dot) for dot in dots], lag_ratio=0.25, run_time=3))
         self.wait()
@@ -54,6 +55,7 @@ class Three_Dimensional_Part_Of_Introduction(ThreeDScene):
         z = np.clip(z, 0, 100)
         z = [1 if item > 70 else 0 for item in z]
         dots = [Dot3D((axes.c2p(i, j, k)), color=YELLOW) for i, j, k in zip(x, y, z)]
+
         self.set_camera_orientation(phi=75*DEGREES)
         self.add(graph_stuff, *[dot for dot in dots])
         self.begin_ambient_camera_rotation(rate=PI/10, about='theta')

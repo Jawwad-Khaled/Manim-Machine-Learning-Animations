@@ -19,6 +19,7 @@ class Introduction(Scene):
         y = 6 * x + 40 + 10 * np.random.randn(30)
         y = np.clip(y, 0, 100)
         dots = [Dot((axes.c2p(i, j)), color=YELLOW) for i, j in zip(x, y)]
+        
         self.play(LaggedStart(Create(axes), Create(axis_labels)), run_time=5)   
         self.play(LaggedStart(*[Write(dot) for dot in dots], lag_ratio=0.25, run_time=30))
         self.wait(10)
