@@ -11,3 +11,6 @@ file 'file:C:/Users/mechz/manimations/Decision_Trees/media/videos/decision_trees
 file 'file:C:/Users/mechz/manimations/Decision_Trees/media/videos/decision_trees/1080p60/partial_movie_files/Introduction/2213807979_1068619010_2404057920.mp4'
 file 'file:C:/Users/mechz/manimations/Decision_Trees/media/videos/decision_trees/1080p60/partial_movie_files/Introduction/2213807979_4046863825_3341745163.mp4'
 file 'file:C:/Users/mechz/manimations/Decision_Trees/media/videos/decision_trees/1080p60/partial_movie_files/Introduction/2213807979_2001735498_957365807.mp4'
+file 'file:C:/Users/mechz/manimations/Decision_Trees/media/videos/decision_trees/1080p60/partial_movie_files/Introduction/2213807979_1818999630_2404052106.mp4'
+file 'file:C:/Users/mechz/manimations/Decision_Trees/media/videos/decision_trees/1080p60/partial_movie_files/Introduction/2213807979_4046863825_2585165412.mp4'
+file 'file:C:/Users/mechz/manimations/Decision_Trees/media/videos/decision_trees/1080p60/partial_movie_files/Introduction/2213807979_4057038816_3871776948.mp4'

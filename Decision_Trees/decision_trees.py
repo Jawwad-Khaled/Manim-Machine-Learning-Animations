@@ -3,18 +3,24 @@ import numpy as np
 
 class Introduction(Scene):
     def construct(self):
+        table = Table([['Likes Chocolate Cake', 'Favorite Move', '...', 'Likes Soda', 'Favorite Ice Cream Flavor'],
+            ['False', 'Endgame', '...', 'True', 'Vanilla'],
+            ['True', 'The Matrix', '...', 'False', 'Butterscotch'],
+            ['True', 'Troll 2', '...', 'True', 'Mint Chocolate Chip'],
+            ['...', '...', '...', '...', '...'],
+            ['True', 'Interstellar', '...', 'True', 'Chocolate'],
+            ['True', 'Coco', '...', 'False', 'Butterscotch'],
+            ['False', 'PAW Patrol: The Movie', '...', 'True', 'Strawberry']]).scale(0.4)
         text1 = Tex(r'You passed!').shift(UP*3)
         text2 = Tex(r'So you decide to buy ice cream to celebrate!').shift(UP*1)
         text3 = Tex(r'But you do not know which flavor to buy').shift(DOWN*1)
         text4 = Tex(r'So you survey your classmates!').shift(DOWN*3)
-        table = Table([['Likes Chocolate Cake', 'Favorite Move', '...', 'Likes Soda', 'Favorite Ice Cream Flavor'],
-                ['False', 'Endgame', '...', 'True', 'Vanilla'],
-                ['True', 'The Matrix', '...', 'False', 'Butterscotch'],
-                ['True', 'Troll 2', '...', 'True', 'Mint Chocolate Chip'],
-                ['...', '...', '...', '...', '...'],
-                ['True', 'Interstellar', '...', 'True', 'Chocolate'],
-                ['True', 'Coco', '...', 'False', 'Butterscotch'],
-                ['False', 'PAW Patrol: The Movie', '...', 'True', 'Strawberry']]).scale(0.4)
+        text5 = Tex(r'Gradient boosting and XGboost require').shift(UP*2)
+        text6 = Tex(r'a strong foundation in calculus').shift(UP*1.5)
+        text7 = Tex(r'Single decision trees and random forests').shift(UP*0.25)
+        text8 = Tex(r'require much less math').shift(DOWN*0.25)
+        text9 = Tex(r'Linear algebra is not as important in this video').shift(DOWN*1.5)
+        text10 = Tex(r'but it is still helpful to know').shift(DOWN*2)
 
         self.play(Write(text1))
         self.wait()
@@ -28,6 +34,9 @@ class Introduction(Scene):
         self.play(Write(table))        
         self.wait()
         self.play(Unwrite(table))
+        self.play(LaggedStart(Write(text5), Write(text6), Write(text7), Write(text8), Write(text9), Write(text10), run_time=10, lag_ratio=0.8))
+        self.wait()
+        self.play(LaggedStart(Unwrite(text10), Unwrite(text9), Unwrite(text8), Unwrite(text7), Unwrite(text6), Unwrite(text5), run_time=5, lag_ratio=0.8))
 
 class Parametric_And_Non_Parametric_Models(Scene):
     def construct(self):

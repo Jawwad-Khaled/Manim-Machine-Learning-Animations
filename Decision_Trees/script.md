@@ -22,7 +22,7 @@ There are various stopping conditions. One is the depth of the tree which is the
 
 With this, it becomes easy to see why decision trees are nonparametric. If you use a small training dataset, the number of data points in each node may go under the threshold relatively early so the questions stop earlier and a smaller tree is made. If you have a larger dataset, it would take a lot more questions for the number of data points in every node to go under the threshold so many more questions are asked and a larger tree is made. The size of the model directly depends on the size of the training dataset.
 
-So that is basically how a decision tree works but how do you choose which questions are asked? That is something we will spend much more time on.
+So that is basically how a decision tree works but how do you choose which questions are asked? That is something we will spend much more time on but first, we need to see how decision trees separate the data.
 
 ## How A Decision Tree Separates Data
 
